@@ -1,0 +1,27 @@
+<div class="container-fluid bg-dark" dir="rtl">
+  <div class="row align-items-center no-gutters">
+    <div class="col-auto app-title font-weight-bold">
+      {{appTitle}}
+    </div>
+    <div class="col text-right">
+      <ng-container *ngFor="let item of this.menue;">
+        <button
+          class="text-white font-weight-bold"
+          mat-button
+          [matMenuTriggerFor]="menuRef"
+          [matMenuTriggerData]="{ item: item }"
+        >
+          {{ item.title }}
+        </button>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<mat-menu #menuRef="matMenu"  >
+  <ng-template matMenuContent let-item="item">
+    <button mat-menu-item [disableRipple]="true"  *ngFor="let subItem of item.subItems">
+      {{ subItem.title }}
+    </button>
+  </ng-template>
+</mat-menu>

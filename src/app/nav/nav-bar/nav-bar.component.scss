@@ -1,0 +1,10 @@
+.app-title{
+  color:rgb(235, 183, 88);
+}
+::ng-deep .mat-menu-item {
+  line-height: 30px!important;
+  height:30px!important;
+}
+::ng-deep   button.mat-menu-item:focus{
+  outline: none!important;
+}
