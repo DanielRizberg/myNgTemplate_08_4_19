@@ -28,9 +28,12 @@
               },
               "node_modules/bootstrap/scss/bootstrap.scss",
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
+              "node_modules/ionicons/dist/scss/ionicons.scss",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/file-saver/dist/FileSaver.min.js"
+            ]
           },
           "configurations": {
             "production": {
