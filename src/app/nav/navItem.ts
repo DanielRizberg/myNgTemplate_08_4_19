@@ -1,9 +1,9 @@
-export class navItem{
-  constructor(init?:Partial<navItem>){
-    Object.assign(this,init);
+export class navItem {
+  constructor(init?: Partial<navItem>) {
+    Object.assign(this, init);
   }
-  title:string='';
-  link:string='';
-subItems:navItem[]=null
-
+  title: string = "";
+  link: string = "";
+  subItems: navItem[] = null;
+  class: string = "";
 }

@@ -3,8 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MatInputModule, MatMenuModule, MatButtonModule, MatIconModule } from '@angular/material';
+import { MatInputModule, MatMenuModule, MatButtonModule } from '@angular/material';
 import { NavBarComponent } from './nav/nav-bar/nav-bar.component';
+import { DialogsModule } from '@progress/kendo-angular-dialog';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,10 +15,12 @@ import { NavBarComponent } from './nav/nav-bar/nav-bar.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    DialogsModule,
     MatInputModule,
     MatMenuModule,
     MatButtonModule,
-    MatIconModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
