@@ -1,28 +1,53 @@
 <div class="container-fluid bg-dark" dir="rtl">
   <div class="row align-items-center no-gutters">
     <div class="col-auto app-title font-weight-bold">
-      {{appTitle}}
+      {{ appTitle }}
     </div>
     <div class="col text-right">
-      <ng-container *ngFor="let item of this.menue;">
-        <button
-          class="text-white font-weight-bold"
-          mat-button
-          [matMenuTriggerFor]="menuRef"
-          [matMenuTriggerData]="{ item: item }"
-        >
-          {{ item.title }}
-          <i [className]="item.class"></i>
-        </button>
+      <ng-container *ngFor="let item of this.menue">
+        <ng-container
+          *ngTemplateOutlet="
+            item.subItems ? listDropDown : singleDropDown;
+            context: { item: item }
+          "
+        ></ng-container>
       </ng-container>
+      <span class="page-header font-weight-bold">
+        {{ currentRoute.title }}
+      </span>
     </div>
   </div>
 </div>
 
-<mat-menu #menuRef="matMenu"  >
+<mat-menu #menuRef="matMenu">
   <ng-template matMenuContent let-item="item">
-    <button mat-menu-item [disableRipple]="true"  *ngFor="let subItem of item.subItems">
+    <a
+      [routerLink]="subItem.link"
+      mat-menu-item
+      [disableRipple]="true"
+      *ngFor="let subItem of item.subItems"
+    >
       {{ subItem.title }}
-    </button>
+
+      <i [className]="subItem.iconClass" style="margin-right:4px"></i>
+    </a>
   </ng-template>
 </mat-menu>
+<ng-template #singleDropDown let-item="item">
+  <a [routerLink]="item.link" class="text-white font-weight-bold" mat-button>
+
+    {{ item.title }}
+    <i [className]="item.iconClass" style="margin-right:4px"></i>
+  </a>
+</ng-template>
+<ng-template #listDropDown let-item="item">
+  <button
+    class="text-white font-weight-bold"
+    mat-button
+    [matMenuTriggerFor]="menuRef"
+    [matMenuTriggerData]="{ item: item }"
+  >
+    {{ item.title }}
+    <i [className]="item.iconClass"></i>
+  </button>
+</ng-template>

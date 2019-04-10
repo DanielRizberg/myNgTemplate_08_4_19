@@ -33,6 +33,7 @@
     "@progress/kendo-angular-dialog": "^3.11.0",
     "@progress/kendo-angular-l10n": "^1.1.0",
     "@progress/kendo-theme-default": "latest",
+    "@tinymce/tinymce-angular": "^3.0.0",
     "@types/chart.js": "^2.7.50",
     "@types/jquery": "^3.3.29",
     "@types/mathjs": "^5.0.1",

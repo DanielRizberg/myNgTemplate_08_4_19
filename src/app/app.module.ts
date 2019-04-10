@@ -6,6 +6,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MatInputModule, MatMenuModule, MatButtonModule } from '@angular/material';
 import { NavBarComponent } from './nav/nav-bar/nav-bar.component';
 import { DialogsModule } from '@progress/kendo-angular-dialog';
+import { AppRoutingModule } from './pages/appRouting/appRouting.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { DialogsModule } from '@progress/kendo-angular-dialog';
     NavBarComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
     DialogsModule,
