@@ -1,21 +1,25 @@
 <div class="container-fluid bg-dark" dir="rtl">
-  <div class="row align-items-center no-gutters">
-    <div class="col-auto app-title font-weight-bold">
+  <div class="row align-items-center no-gutters justify-content-start">
+    <div class="col-sm-auto app-title font-weight-bold text-right">
       {{ appTitle }}
     </div>
-    <div class="col text-right">
-      <ng-container *ngFor="let item of this.menue">
-        <ng-container
-          *ngTemplateOutlet="
-            item.subItems ? listDropDown : singleDropDown;
-            context: { item: item }
-          "
-        ></ng-container>
-      </ng-container>
-      <span class="page-header font-weight-bold">
-        {{ currentRoute.title }}
-      </span>
+    <div class="col-sm-auto text-right">
+      <div class="row align-items-center no-gutters justify-content-start">
+        <ng-container *ngFor="let item of this.menue">
+          <div class="col-sm-auto">
+            <ng-container
+              *ngTemplateOutlet="
+                item.subItems ? listDropDown : singleDropDown;
+                context: { item: item }
+              "
+            ></ng-container>
+          </div>
+        </ng-container>
+      </div>
     </div>
+    <span class="col-auto page-header font-weight-bold">
+      {{ currentRoute.title }}
+    </span>
   </div>
 </div>
 
@@ -34,15 +38,14 @@
   </ng-template>
 </mat-menu>
 <ng-template #singleDropDown let-item="item">
-  <a [routerLink]="item.link" class="text-white font-weight-bold" mat-button>
-
+  <a [routerLink]="item.link" class="text-white font-weight-bold menue-item-effect" mat-button>
     {{ item.title }}
     <i [className]="item.iconClass" style="margin-right:4px"></i>
   </a>
 </ng-template>
 <ng-template #listDropDown let-item="item">
   <button
-    class="text-white font-weight-bold"
+    class="text-white font-weight-bold menue-item-effect"
     mat-button
     [matMenuTriggerFor]="menuRef"
     [matMenuTriggerData]="{ item: item }"
