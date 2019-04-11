@@ -47,7 +47,7 @@ export class NavBarComponent implements OnInit, OnDestroy {
 
     this.sub = this.router.events.filter(x => x instanceof NavigationEnd)
       .subscribe((nav:NavigationEnd) => {
-          console.log(nav)
+         // console.log(nav)
 
         let urlAfterRedirects = nav.urlAfterRedirects;
         let url=nav.url;

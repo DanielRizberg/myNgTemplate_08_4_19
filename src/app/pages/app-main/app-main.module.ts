@@ -4,11 +4,15 @@ import { NgModule } from '@angular/core';
 // This Module's Components
 import { AppMainComponent } from './app-main.component';
 import { AppMainrouteRoutes } from './appMainroute.routing';
-import { ActivatedRoute } from '@angular/router';
+import { QuillModule } from 'ngx-quill'
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     imports: [
-      AppMainrouteRoutes
+      AppMainrouteRoutes,
+      QuillModule
+       ,
+FormsModule
     ],
     declarations: [
         AppMainComponent,

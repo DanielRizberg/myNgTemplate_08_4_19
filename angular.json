@@ -29,10 +29,14 @@
               "node_modules/bootstrap/scss/bootstrap.scss",
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "node_modules/ionicons/dist/scss/ionicons.scss",
+              "node_modules/quill/dist/quill.core.css",
+              "node_modules/quill/dist/quill.bubble.css",
+              "node_modules/quill/dist/quill.snow.css",
               "src/styles.scss"
             ],
             "scripts": [
               "node_modules/file-saver/dist/FileSaver.min.js"
+
             ]
           },
           "configurations": {
