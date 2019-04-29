@@ -22,7 +22,7 @@ import { AppRoutingModule } from "./pages/appRouting/appRouting.module";
     DialogsModule,
     MatInputModule,
     MatMenuModule,
-    MatButtonModule,
+    MatButtonModule
 
   ],
   providers: [],
