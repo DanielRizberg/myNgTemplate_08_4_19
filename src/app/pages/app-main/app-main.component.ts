@@ -36,4 +36,6 @@ export class AppMainComponent {
      // ['link', 'image', 'video']                         // link and image, video
     ]
   };
+
+
 }

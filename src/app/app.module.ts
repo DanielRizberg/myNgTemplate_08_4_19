@@ -11,6 +11,7 @@ import {
 import { NavBarComponent } from "./nav/nav-bar/nav-bar.component";
 import { DialogsModule } from "@progress/kendo-angular-dialog";
 import { AppRoutingModule } from "./pages/appRouting/appRouting.module";
+import {  HttpClientModule } from "@angular/common/http";
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { AppRoutingModule } from "./pages/appRouting/appRouting.module";
     MatInputModule,
     MatMenuModule,
     MatButtonModule
-
+,HttpClientModule
   ],
   providers: [],
   exports: [
